@@ -1,0 +1,6 @@
+const tokenAddress = '0xContractAddress'; // Replace with the address of your deployed contract
+const token = new web3.eth.Contract(tokenABI, tokenAddress);
+
+token.methods.transfer('0xRecipientAddress', 1000).send({from: '0xYourAddress'}).then((result) => {
+    console.log(result);
+});

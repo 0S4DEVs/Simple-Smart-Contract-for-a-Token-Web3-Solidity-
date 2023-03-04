@@ -1,0 +1,8 @@
+const token = new web3.eth.Contract(tokenABI);
+token.deploy({data: tokenBytecode, arguments: []}).send({
+    from: '0xYourAddress', // Change to your own address
+    gas: 1500000,
+    gasPrice: '30000000000' // 30 Gwei
+}).then((newContractInstance) => {
+    console.log('Contract deployed at address:', newContractInstance.options.address);
+});

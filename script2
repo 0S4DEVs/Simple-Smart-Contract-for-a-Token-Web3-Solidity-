@@ -1,0 +1,2 @@
+const tokenABI = require('./build/Token.abi');
+const tokenBytecode = require('./build/Token.bin');
